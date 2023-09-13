@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name" id="A">Name: </label>
+        <input type="text" placeholder="name" name="uname">
+        <br>
+        <br>
+        <label for="email" id="B">Email: </label>
+        <input type="emaail" placeholder="email" name="uemail">
+        <br>
+        <br>
+        <label for="password" id="C">Password:</label>
+        <input type="text" placeholder="password" name="upass">
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+</body>
+</html>
