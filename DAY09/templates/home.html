@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <label for="uname">Name:</label>
+        <input type="text" id="A" name="uname">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="B" name="password">
+        <br>
+        <button type="submit">Submit:</button>
+        <br>
+    </form>
+    <h1>Hello {{ usname }} </h1>
+</body>
+</html>
